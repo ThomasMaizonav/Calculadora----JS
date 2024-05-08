@@ -21,6 +21,15 @@ body{
     justify-content: center;
 }
 
+.logo{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 1000; /* Z-index para garantir que a imagem fique acima de outros elementos, se houver */
+}
+
 .wrapper{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
@@ -49,6 +58,11 @@ body{
     padding: 20px;
     text-align: right;
     width: 326px;
+}
+
+.theme-light .screen {
+    background-color: #8a84848a; /* Cor de fundo mais escura */
+    color: #FFFFFF; /* Cor do texto na tela */
 }
 
 .calc-button-row{
@@ -102,4 +116,96 @@ body{
 
 .triple{
     flex-basis: 73%;
+}
+
+.theme-light {
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #333333; /* Texto preto */
+}
+
+.theme-light .calc-button {
+    background-color: #E0E0E0; /* Cor de fundo dos botões */
+    color: #333333; /* Cor do texto nos botões */
+}
+
+.theme-light .calc-button:hover {
+    background-color: #CCCCCC; /* Cor de fundo ao passar o mouse sobre os botões */
+}
+
+.theme-light .calc-button:active {
+    background-color: #BEBEBE; /* Cor de fundo ao clicar nos botões */
+}
+
+.theme-dark {
+    background-color: #1E1E1E; /* Fundo escuro */
+    color: #FFFFFF; /* Texto branco */
+}
+
+.theme-dark .calc-button {
+    background-color: #333333; /* Cor de fundo dos botões */
+    color: #FFFFFF; /* Cor do texto nos botões */
+}
+
+.theme-dark .calc-button:hover {
+    background-color: #444444; /* Cor de fundo ao passar o mouse sobre os botões */
+}
+
+.theme-dark .calc-button:active {
+    background-color: #555555; /* Cor de fundo ao clicar nos botões */
+}
+
+.theme-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.theme-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.theme-buttons button {
+    background-color: #262b26;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.theme-buttons button:hover {
+    background-color: #091a0a73;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #cccccc; /* Cor da linha */
+    margin-top: 20px; /* Espaçamento acima da linha */
+    margin-bottom: 20px; /* Espaçamento abaixo da linha */
+}
+
+.social__media__text{
+    text-align: center;
+    color: #cccccc;
+}
+
+.social-heading {
+    text-align: center;
+}
+
+.social-icons {
+    text-align: center;
+    padding: 10%;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px; /* Tamanho dos ícones */
+    color: #333; 
 }

@@ -96,3 +96,46 @@ function init(){
 }
 
 init();
+
+function changeTheme(theme) {
+    const wrapper = document.querySelector('.wrapper');
+
+    // Remova as classes de tema atual
+    wrapper.classList.remove('theme-light', 'theme-dark');
+
+    // Adicione a classe do novo tema
+    wrapper.classList.add(`theme-${theme}`);
+}
+
+function init() {
+    document.querySelector('.calc-buttons').addEventListener('click', function(event) {
+       buttonClick(event.target.innerText); 
+    });
+
+    // Adicione eventos para os botões de tema
+    document.querySelector('.theme-buttons').addEventListener('click', function(event) {
+        const theme = event.target.innerText.toLowerCase().split(' ')[0]; // Obtém o texto do botão e converte para lowercase
+        changeTheme(theme);
+    });
+}
+
+function init() {
+    document.querySelector('.calc-buttons').addEventListener('click', function(event) {
+       buttonClick(event.target.innerText); 
+    });
+
+    // Adicione eventos para os botões de tema
+    document.querySelector('.theme-buttons').addEventListener('click', function(event) {
+        const theme = event.target.innerText.toLowerCase().split(' ')[0]; // Obtém o texto do botão e converte para lowercase
+        changeTheme(theme);
+    });
+
+    // Adicione eventos para os botões de número
+    const numberButtons = document.querySelectorAll('.calc-button:not(.theme-buttons)'); // Selecione todos os botões de número, excluindo os botões de tema
+    numberButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            handleNumber(event.target.innerText); // Chama a função handleNumber com o texto do botão como argumento
+            screen.innerText = buffer; // Atualiza a tela após clicar no botão de número
+        });
+    });
+}
