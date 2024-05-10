@@ -95,7 +95,7 @@ function init(){
     });
 }
 
-init();
+;
 
 function changeTheme(theme) {
     const wrapper = document.querySelector('.wrapper');
@@ -107,7 +107,7 @@ function changeTheme(theme) {
     wrapper.classList.add(`theme-${theme}`);
 }
 
-function init() {
+{
     document.querySelector('.calc-buttons').addEventListener('click', function(event) {
        buttonClick(event.target.innerText); 
     });
